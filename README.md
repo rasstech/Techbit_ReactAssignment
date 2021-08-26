@@ -15,8 +15,9 @@ In this app we can do the following actions:
              (ii) add Image
 
 4. we can see this post on home page .
+ 
+5.   and we can delter this post.
 
-5. we can view friend list .
+6. we can view friend list .
 
-6. we can  view profile image and UserName .
-
+7. we can  view profile image and UserName .
