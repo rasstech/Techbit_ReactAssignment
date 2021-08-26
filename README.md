@@ -16,7 +16,7 @@ In this app we can do the following actions:
 
 4. we can see this post on home page .
  
-5.   and we can delter this post.
+5.   and we can also delete this post.
 
 6. we can view friend list .
 
