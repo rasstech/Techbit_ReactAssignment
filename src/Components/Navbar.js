@@ -7,9 +7,8 @@ import AddToPhotosIcon from "@material-ui/icons/AddToPhotos";
 import Modal from "./Modal";
 import Dp from "./img/mypic.jpeg";
 
-let localUser = JSON.parse(localStorage.getItem("user"));
-
-const Navbar = () => {
+const Navbar = ({postAdded}) => {
+  let localUser = JSON.parse(localStorage.getItem("user"));
   const history = useHistory();
   const [isOpen, setisOpen] = useState(false);
   const [postDesc, setPostDesc] = useState("");
@@ -41,6 +40,7 @@ const Navbar = () => {
   const SavePost = () => {
     localStorage.setItem("postDesc", postDesc);
     setisOpen(false);
+    postAdded(true);
     history.push("/signin/home");
     // console.log(imgPath, title);
   };

@@ -4,27 +4,29 @@ import Dp from "./img/mypic.jpeg";
 import Navbar from "./Navbar";
 
 const Home = () => {
-  const history = useHistory();
+
   let localUser = JSON.parse(localStorage.getItem("user"));
+  const history = useHistory();
   let title = localStorage.getItem("postDesc");
   let imgPath = localStorage.getItem("postImg");
 
   const [likeCount, setlikeCount] = useState(1);
-  const [Post, setPost] = useState(true);
+  const [Post, setPost] = useState(null);
 
   const RemovePost = () => {
-    setPost(false);
+    setPost(true);
     localStorage.removeItem("postDesc");
     localStorage.removeItem("postImg");
    };
   
+  
   return (
     <div>
-      <Navbar />
+      <Navbar postAdded = {setPost()}  />
       
       {Post?
         <div className="Homecontainer">
-        <div className="post">
+         <div className="post">
             <div className="postUserDetail">
               <img
                 style={{ width: "40px", height: "40px", borderRadius: "100px" }}
